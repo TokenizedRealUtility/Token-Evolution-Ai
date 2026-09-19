@@ -93,9 +93,23 @@ Using Docker? Add `--env-file .env` to your run command.
 
 ---
 
+🧾 **Step 3: Pick your "stamp payer" address**
 
-**Step 3: Set up the stamp payer**
-Each evolution is stamped on-chain with a tiny transaction fee. In tru.conf, set the oracle address and key to a separate, low-balance address, and send it a small amount of TRU for fees. If this isn't set up, your evolution waits in line instead of confirming.
+Every evolution gets stamped on-chain for a tiny fee. Tell your node which of your own wallet addresses pays for it by adding this to **tru.conf**:
+
+`oracle.address=<one of your wallet addresses>`
+
+✅ The address must be in your node's wallet (tru.dat).
+✅ Keep your wallet encrypted and unlocked while the node runs.
+✅ Keep a small amount of TRU on that address for fees.
+
+No private keys go in tru.conf. Your node signs with your wallet.
+
+If this isn't set, your evolution still saves locally, but it waits in line and won't show as confirmed on-chain.
+
+---
+
+Tip: use a separate address with just a little TRU, so the fee payer never touches your main balance.
 
 **Step 4: Create your AI token**
 Main menu → **17 AI Tools** → **1 Create AI Token**
