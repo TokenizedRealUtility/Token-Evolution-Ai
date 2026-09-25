@@ -134,6 +134,36 @@ Your node stamps the evolution onto the chain automatically. Use **3 View Token 
 • 🏷 **Brand or community mascots** that grow with your project's milestones
 • 🎟 **Event tokens** that evolve after the event ("I was there → Season 2 veteran")
 
+# 🧬 What can you build with TRU AI Evolve Tokens?
+
+An Evolve Token is more than an image attached to a token. It can develop a numbered history, receive issuer-approved new descriptive traits, change its linked artwork and progress through different stages. Every committed evolution builds on the previous metadata hash; on-chain anchoring makes the recorded history independently checkable.
+
+## Seven use cases you can prototype today
+
+| Use case | Example issuer-reported change | Current implementation |
+|---|---|---|
+| 🎮 Game character | Victory → new armor, art and story chapter | Manual SFT/NCFT preview; game integration not yet automatic |
+| 🚜 Equipment digital twin | Operating hours → maintenance → new components | Manual descriptive milestones and optional references; no live sensor feed yet |
+| 🏠 Property record | Construction → inspection → renovation/photos | Manual milestone/artwork history; **not legal ownership or certified inspection proof** |
+| 🎟 Event ticket | Upcoming → issuer-reported attended → souvenir | Manual stage description; no automatic admission validation |
+| 🏆 Membership | Bronze → Silver → Gold | Manual status metadata; access rights still need external or contract-based enforcement |
+| 📦 Product journey | Manufacture → inspection → shipped → delivered | Manual history; producer/distributor attestations need a future signed-data pipeline |
+| 🐙 One million Kraken Energy Cells | Project milestone → shared new collection art | Evolve the **shared SFT token metadata**; never adjust unit supply or balances |
+
+**Today's verified building blocks:** constrained AI-assisted **SFT/NCFT** metadata and artwork previews, exact issuer-signed approval, a linked evolution timeline, anchored transaction history, previous-versus-current inspection and latest *authorized and confirmed* artwork display where the upgraded explorer is deployed. Each prior epoch remains in provenance even when it no longer represents the newest image.
+
+**Boundaries:** TRU proves which record was anchored and when. An AI description or issuer-reported event is **not** independently fact-checked by anchoring. No automated source can bypass the original issuer's current approval rule. A standalone NFT/FT cannot use SFT/NCFT evolution in this patch without a separate engine and authorization design.
+
+**Future integrations, not shipped in this patch:** game event adapters; equipment sensors and signed service logs; wallet activity; token-gated community voting; mining milestones; scheduled event feeds; and VAH authenticated real-world observations. Such adapters should deliver signed, attributable evidence into a bounded preview, with issuer-policy review and existing commit/anchor verification—not direct uncontrolled AI writes.
+
+**Simple explanation:** A static token is a photograph. An Evolve Token is a character with a memory, a story and a verifiable history of how its approved metadata changed.
+
+## Getting started
+
+Run and sync Core; configure a supported AI provider and a low-balance evolution anchor payer address. Create an **SFT or NCFT** and confirm issuance. In Core select `17 → 2 → 1` (text) or `17 → 2 → 4` (artwork), choose the scenario, enter the real issuer-reported milestone, inspect the new fields, and only then `17 → 2 → 2` to approve **the exact preview** with the original issuer key. Wait for anchor confirmation and call `verifytokenevolution` to check `runtime_ok`, `issuer_authorized` and `fully_anchored`. Version-specific hosted image URLs and matching image hashes are needed for image changes.
+
+AI keys belong in private environment variables or a locked-down `.env` loaded into Core's process, never in public `tru.conf` or GitHub. Do not expose privileged RPC publicly.
+
 🔮 **COMING LATER**
 The foundation is already built for **human, sensor, and device writers**. For example, a plant sensor could update a token's "health," or a certified expert could sign an update. Every change would be signed and permissioned by the token owner, and the history would stay verifiable. It isn't switched on for users yet.
 
